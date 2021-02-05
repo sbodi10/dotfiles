@@ -1,0 +1,37 @@
+# This is Git's per-user configuration file.
+[color]
+ui = auto
+[color "branch"]
+current = yellow reverse
+local = yellow
+remote = green
+[color "diff"]
+meta = yellow bold
+frag = magenta bold
+old = red bold
+new = green bold
+[color "status"]
+added = green
+changed = yellow
+untracked = red
+[alias]
+st = status
+ci = commit
+br = branch
+co = checkout
+df = diff
+l = log --pretty=oneline -n 20 --graph
+lg = log -p
+lol = log --graph --pretty=format:'%C(yellow)%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cblue(%cr)%Creset' --abbrev-commit --date=relative
+lola = log --graph --pretty=format:'%C(yellow)%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cblue(%cr)%Creset' --abbrev-commit --date=relative --all
+ls = ls-file
+s = status -s
+tags = tags -l
+branches = branch -a
+# Credit an author on the latest commit
+credit = "!f() { git commit --amend --author \"$1 <$2>\" -C HEAD; }; f"
+[core]
+excludesfile = ~/.gitignore
+[user]
+	name = Sapan Bodiwala
+	email = sbodiwala10@gmail.com
